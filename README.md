@@ -1,6 +1,12 @@
 # AI Career Guidance Chatbot
 
-A production-ready, AI-powered career guidance chatbot built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **OpenAI API**. Get personalized career recommendations, required skills, and step-by-step learning roadmaps.
+A production-ready, AI-powered career guidance chatbot built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Free Mock Responses** (no API costs). Get personalized career recommendations, required skills, and step-by-step learning roadmaps.
+
+## 🌐 Live Demo
+
+**Try it now:** [https://career-path-silk.vercel.app/chat](https://career-path-silk.vercel.app/chat)
+
+✅ Fully functional and free to use!
 
 ## 🚀 Features
 
@@ -23,7 +29,7 @@ A production-ready, AI-powered career guidance chatbot built with **Next.js 14**
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
-- **AI:** OpenAI API (GPT-3.5-turbo)
+- **Career Data:** Free Mock Responses (no API costs)
 - **Animations:** Framer Motion
 - **Icons:** Lucide React
 - **State Management:** Zustand
@@ -35,8 +41,9 @@ Before you begin, make sure you have:
 
 - **Node.js** 18.0 or higher
 - **npm** or **yarn** package manager
-- **OpenAI API Key** (get it from [platform.openai.com](https://platform.openai.com))
 - **VS Code** (recommended)
+
+**No API keys required!** The app uses free mock responses.
 
 ## 🚀 Quick Start
 
@@ -55,14 +62,10 @@ npm install
 cp .env.example .env.local
 ```
 
-### 2. Add Your OpenAI API Key
+### 2. Install Dependencies
 
-1. Open `.env.local` file
-2. Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
-3. Add your key:
-
-```env
-OPENAI_API_KEY=sk-your-api-key-here
+```bash
+npm install
 ```
 
 ### 3. Run in Development Mode
@@ -92,7 +95,7 @@ src/
 │   │   └── page.tsx            # Chat interface
 │   └── api/
 │       └── chat/
-│           └── route.ts        # OpenAI API integration
+│           └── route.ts        # Career guidance API (free mock)
 ├── components/
 │   ├── ChatMessage.tsx         # Message display component
 │   ├── ChatInput.tsx           # User input component
@@ -110,7 +113,7 @@ src/
 
 ## 🔧 API Integration
 
-The chatbot uses Next.js API Routes to securely communicate with OpenAI:
+The chatbot uses Next.js API Routes with smart career guidance detection:
 
 ### Endpoint: `POST /api/chat`
 
@@ -125,17 +128,15 @@ The chatbot uses Next.js API Routes to securely communicate with OpenAI:
 }
 ```
 
-**Response:**
+**Response (Free Mock):**
 ```json
 {
   "success": true,
-  "response": "Here are the top 3 career paths...",
-  "usage": {
-    "prompt_tokens": 150,
-    "completion_tokens": 500
-  }
+  "response": "## Career Path Recommendations\n### 1. **Machine Learning Engineer**\n- Salary Range: $120,000 - $180,000/year..."
 }
 ```
+
+✨ **Instant responses, completely free - no external API calls!**
 
 ## 📦 Build & Production
 
@@ -151,13 +152,13 @@ npm run start
 
 ## 🚢 Deploy to Vercel (One-Click)
 
-### Option 1: Deploy with GitHub
+### Option 1: Deploy with GitHub (Recommended)
 
 1. Push this project to GitHub
 2. Go to [vercel.com](https://vercel.com)
 3. Click "New Project" → Import your GitHub repo
-4. Add environment variable: `OPENAI_API_KEY=your-key-here`
-5. Click Deploy
+4. Click Deploy (no environment variables needed!)
+5. Your app is live!
 
 ### Option 2: Deploy with Vercel CLI
 
@@ -167,16 +168,11 @@ npm install -g vercel
 
 # Deploy from project directory
 vercel
-
-# Add your OpenAI API key when prompted
 ```
 
-### Option 3: Manual Environment Setup on Vercel
+✅ **No API keys required** - The app uses free mock responses, so there's nothing to configure!
 
-1. Deploy your project to Vercel
-2. Go to Project Settings → Environment Variables
-3. Add: `OPENAI_API_KEY` = your OpenAI API key
-4. Redeploy
+**Live Demo:** [https://career-path-silk.vercel.app/chat](https://career-path-silk.vercel.app/chat)
 
 ## 🎯 Usage Guide
 
